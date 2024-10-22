@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Robinbot</title>
+    
+  <style>
+            * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+        background: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        #chat {
+          background: black;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        #messages {
+            flex-grow: 1;
+            overflow-y: auto;
+           
+            border-radius: 0px;
+            padding: 10px;
+            height: 80vh;
+            background-image: url('/imagem/pagina.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+         
+        }
+        .message {
+            margin-bottom: 8px;
+            padding: 8px;
+            border-radius: 5px;
+            word-wrap: break-word;
+            width: 100%;
+           
+        }
+        .user-message {
+          margin-top: 1rem;
+            background-color: #777777;
+            color: white;
+            font-weight: 900;
+            align-self: flex-start;
+            border-radius: 10px 10px 0px 10px;
+        }
+        .bot-message {
+          margin-top: 1.5rem;
+            background-color: #424242;
+            color: white;
+            align-self: flex-end;
+            border-radius: 10px 10px 10px 0px;
+        }
+        
+        header{
+          display: flex;
+          justify-content: space-between;
+          background: #212121;
+          font-size: 2.5rem;
+          font-weight: 900;
+          box-shadow: 0 0.1rem 0.5rem black;
+          color: whitesmoke;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        header span{
+          margin-left: 1rem;
+          
+        }
+        header img{
+          width: 2rem;
+          height: 2rem;
+          border-radius: 50%;
+        }
+        .bot-message img{
+          width: 2rem;
+          height: 2rem;
+          border-radius: 50%;
+        }
+        #input {
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            height: 15vh;
+            min-height: 10vh;
+            background: #212121;
+            max-height: 10vh;
+        }
+        #userInput {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+           max-height: 6vh;
+          
+         
+           outline: none;
+          background: none;
+          color: white;
+          font-weight: 900;
+        }
+        #sendButton {
+            padding: 0px;
+            margin: 0 0 0 0;
+            background-color: white;
+            color: white;
+            border: none;
+            font-weight: 800;
+            border-radius: 8px;
+            font-size: 2rem;
+            cursor: pointer;
+            
+            transition: background-color 0.3s;
+                       max-height: 6vh;
+           min-height: 6vh;
+        }
+                #sendButtn {
+          padding: 0px;
+          margin: 0 0 0 0;
+          background-color: white;
+          color: white;
+          border: none;
+          font-weight: 800;
+          border-radius: 50%;
+          font-size: 2rem;
+          cursor: pointer;
+
+          transition: background-color 0.3s;
+          max-height: 6vh;
+          min-height: 6vh;
+        }
+        #sendButton:hover {
+            background-color: whitesmokea;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+  </style>
+    
+    
+    
+  <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+
+    <div id="chat">
+      <header class="">
+        <span>Robin</span>
+        <img src="imagem/robot.png" alt="robin">
+      </header>
+        <div id="messages"></div>
+        
+        <div id="input">
+
+            <input type="text" id="userInput" placeholder="Digite sua pergunta..." />
+          
+            <img src="send/send.png" alt="send" id="sendButton">
+        </div>
+    </div>
+    
+    
+
+
+
+
+   <script src="script.js"></script>
+</body>
+</html>
